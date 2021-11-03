@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    align-items: center;
+    background: #d8aa96;
+    color: rgba(0, 0, 0, .8);
+    display: grid;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 100vh;
+    justify-items: center;
+}
+.form-container {
+    display: grid;
+    grid-template-areas: "left right";
+    max-width: 900px;
+}
+.left-container {
+    background-image: url(../img/img-7.jpg);
+    background-size: cover;
+    overflow: hidden;
+    padding: 40px 0 0 0;
+    position: relative;
+    text-align: center;
+    width: 300px;
+}
+ img {
+    width: 95%;
+}
+.right-container {
+    background: #f9c7c2;
+    display: grid;
+    grid-template-areas: "." ".";
+    width: 400px;
+}
+ h1 {
+    color: rgba(0, 0, 0, .8);
+    font-size: 28px;
+    font-weight: 600;
+}
+ .set {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+input, textarea {
+    border: 1px solid rgba(0, 0, 0, .4);
+    border-radius: 4px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 5px;
+}
+input, label {
+    color: rgba(0, 0, 0, .8);
+    width: 230px;
+}
+header {
+    padding: 40px;
+}
+ footer {
+    align-items: center;
+    background: #fff;
+    display: grid;
+    padding: 5px 40px;
+}
+button {
+    border:1px solid rgba(0, 0, 0, .2);
+    height: 38px;
+    line-height: 38px;
+    width: 100px;
+    border-radius: 19px;
+    font-family: sans-serif;
+    margin-right: 3px;
+}
+#addFields, #rmvField{
+  width:30px;
+}
+#addFields:hover{
+    background: #807182;
+    color:white;
+}
+#back:hover{
+    background: #807182;
+    color:white;
+}
+
+#create {
+    background: #807182;
+    border: 1px solid transparent;
+    color: #fff;
+    /* margin-left: 100px; */
+}
+#create:hover {
+    background: #171a2b;
+}
+
+#rmvField:hover{
+    background: #171a2b;
+    color: white;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+span{
+    color:red;
+}
+
+@media screen and (max-width: 600px) {
+    .left-container, .right-container, button {
+      width: 100%;
+      margin-top: 0;
+    }
+  }

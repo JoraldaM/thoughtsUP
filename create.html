@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="img/logo.png" type="image/png" />
+      <link href="css/styleCreate.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <title>thoughtsUP</title>
+      
+    </head>
+<body>
+
+<div class="form-container">
+  <div class="left-container">
+        <img src="img/logo-2.png" alt="Logo"/>
+  </div>
+  <div class="right-container">
+    <form action="" id="form">
+    <header>
+      <h1> Create Post </h1>
+      <div class="set">
+        <div>
+          <label for="title">Title</label>
+          <input id="title" placeholder="Title" type="text"></input><br>
+          <span id="errTitle"></span>
+        </div>
+        </div>
+      <div class="set">
+        <div>
+          <label for="content">Description</label>
+          <textarea id="content" name="content" rows="10" cols="29" placeholder="Content"></textarea>
+        </div>
+        </div>
+        <div class="set">
+        <div>
+        <label for="mainIMg"> Main-image</label>
+         <input id="mImg" value="" required name="imageUrl" type="text" placeholder="Image"/><br>
+         <span id="errImage"></span>
+       </div> 
+        </div>
+        
+      <div class="set">
+        <div>
+          <label for="publisher">Publisher</label>
+          <input value="" required name="author" placeholder="Author" type="text" id="publisher"/>
+        </div>
+      </div>
+      <div>
+      <div class="KeyW">
+        
+        <label for="keywords">Keywords</label>
+        <input value="" required name="keywords[]" placeholder="Keyword" type="text" class="keyW"/> 
+        <button id="addFields"  >&plus;</button>
+        
+      </div>
+      </div>
+    </header>
+    <span id="errData"></span>
+    <footer>
+      <div class="set">
+        <button id="back"><a href="index1.html">Home</a></button>
+        <button type="button" value="Submit" id="errorBtn">Errors</button>
+        <button type="submit" value="Submit" id="create">Create</button>
+      </div>
+    </footer>
+  </div>
+</div>
+</form>
+<script src="js/addRmv.js"></script>
+<script src="js/create.js"></script>
+</body>
+</html>
