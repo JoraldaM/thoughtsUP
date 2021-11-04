@@ -1,206 +1,162 @@
 body {
-    font-family: sans-serif;
-    background: #d8aa96;
+  font-family: sans-serif;
+  background: #d8aa96;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 h1 {
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px black,
-        0 0 82px black,
-        0 0 92px black,
-        0 0 102px black,
-        0 0 151px black;}
-        
-.container {
-    padding: 40px;
-    margin: 0 auto;
-    max-width: 1000px;
-    text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px black,
+    0 0 82px black, 0 0 92px black, 0 0 102px black, 0 0 151px black;
 }
+
 
 #post-container {
-    padding-inline-start: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
-    grid-gap: 20px;
-}
-
-
-.post {
-    list-style-type: none;
-    background-color: rgba(0, 0, 0, 0.14);
-    border-radius: 3px;
-    padding: 10px 20px;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas:
-        'name image'
-        'desc author'
-        'desc  btnP'
-        'btnE btnD'
-        'from form'
-        /* 'author author' */
-        ;
-    text-align: left;
-}
-
-.post > h2 {
-    grid-area: name;
-    margin-bottom: 0px;
-}
-
-.post > p {
-    grid-area: desc;
-    margin-top: 10px;
-    margin-top: -18px;
-}
-
-.post > img {
-    max-height: 100px;
-    grid-area: image;
-}
-.post > h4 {
-    grid-area: author;
-    font-size: medium;
-
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+  grid-gap: 20px;
 }
 
 #searchBar {
-    width: 100%;
-    height: 32px;
-    border-radius: 3px;
-    border: 1px solid #eaeaea;
-    padding: 5px 10px;
-    font-size: 12px;
-    margin-bottom: 10px;
+  width: 100%;
+  height: 32px;
+  border-radius: 3px;
+  border: 1px solid #eaeaea;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 
 #searchWrapper {
-    position: relative;
+  position: relative;
 }
 
 #searchWrapper::after {
-    content: '🔍';
-    position: absolute;
-    top: 7px;
-    right: 15px;
+  content: "🔍";
+  position: absolute;
+  top: 7px;
+  right: 15px;
 }
-ul{
-    list-style-type: none;
+ul {
+  list-style-type: none;
 }
 button {
-    border:1px solid rgba(0, 0, 0, .2);
-    height: 38px;
-    line-height: 38px;
-    width: 80px;
-    border-radius: 19px;
-    font-family: sans-serif;
-    cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 38px;
+  line-height: 38px;
+  min-width: 80px;
+  padding: 5px 10px;
+  border-radius: 19px;
+  font-family: sans-serif;
+  cursor: pointer;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .delete {
-    background: #fff;
-    transition: 0.2s all ease-in-out;
-    grid-area: btnD;
+  background: #fff;
+  transition: 0.2s all ease-in-out;
+  grid-area: btnD;
 }
 .delete:hover {
-    background: red;
-    color: white;
+  background: red;
+  color: white;
 }
-.edit{
-    background-color: #d8aa96;
-    grid-area: btnE;}
- .edit:hover, .page:hover{
-    background: white;
-    color: #d8aa96;
- }   
+.edit {
+  background-color: #d8aa96;
+  grid-area: btnE;
+}
+.edit:hover,
+.page:hover {
+  background: white;
+  color: #d8aa96;
+}
 
-    /* Form */
-    .right-container {
-        background: #f9c7c2;
-        
-        grid-area: form;
-    }
-     h1 {
-        color: rgba(0, 0, 0, .8);
-        font-size: 28px;
-        font-weight: 600;
-    }
-     .set {
-        display: flex;
-        justify-content: space-between;
-        margin: 10px 0;
-    }
-    input, textarea {
-        border: 1px solid rgba(0, 0, 0, .4);
-        border-radius: 4px;
-        height: 38px;
-        line-height: 35px;
-        padding-left: 5px;
-    }
-    input, label {
-        color: rgba(0, 0, 0, .8);
-        width: 200px;
-    }
-    header {
-        padding: 40px;
-    }
-    #addFields, #rmvField{
-      width:25px;
-    }
-    #addFields:hover{
-        background: #807182;
-        color:white;
-    }
-    #back:hover{
-        background: #171a2b;
-        color:white;
-    }
-    #rmvField:hover{
-        background: #171a2b;
-        color: white;
-    }
-    label {
-        display: block;
-        margin-bottom: 5px;
-    }
-    a{
-        text-decoration: none;
-    }
-    .navbar{
-        font-size: 20px;
-        font-family: monospace;
-        color: black;
-    }
-    .btn{
-    border:1px solid rgba(0, 0, 0, .2);
-    height: 38px;
-    width: 100px;
-    border-radius: 19px;
-    font-family: sans-serif;
-    cursor: pointer;
-    background-color: whitesmoke;
-    color:#807185;
-    margin-top: 5px;
-    }
-    .page{
-        grid-area: btnP;
-        margin-bottom: 10px;
-        background-color: #d8aa96;
+/* Form */
+.right-container {
+  background: #f9c7c2;
 
-    }
+  grid-area: form;
+}
+h1 {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 28px;
+  font-weight: 600;
+}
+.set {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+input,
+textarea {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  height: 38px;
+  line-height: 35px;
+  padding-left: 5px;
+}
+input,
+label {
+  color: rgba(0, 0, 0, 0.8);
+  width: 200px;
+}
+header {
+  padding: 40px;
+}
+#addFields,
+#rmvField {
+  width: 25px;
+}
+#addFields:hover {
+  background: #807182;
+  color: white;
+}
+#back:hover {
+  background: #171a2b;
+  color: white;
+}
+#rmvField:hover {
+  background: #171a2b;
+  color: white;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+a {
+  text-decoration: none;
+}
+.navbar {
+  font-size: 20px;
+  font-family: monospace;
+  color: black;
+}
+.btn {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 38px;
+  width: 100px;
+  border-radius: 19px;
+  font-family: sans-serif;
+  cursor: pointer;
+  background-color: whitesmoke;
+  color: #807185;
+  margin-top: 5px;
+}
+.page {
+  grid-area: btnP;
+  margin-bottom: 10px;
+  background-color: #d8aa96;
+}
 
-    @media screen and (max-width: 600px) {
-        .container {
-          width: 400px;
-          margin: 0;
-        }
-      }
+@media screen and (max-width: 600px) {
+  .container {
+    width: 400px;
+    margin: 0;
+  }
+}

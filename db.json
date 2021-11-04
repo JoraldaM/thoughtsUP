@@ -2,14 +2,11 @@
   "posts": [
     {
       "id": 23423432,
-      "title": "Hello world",
-      "keywords": [
-        "test",
-        "javascript"
-      ],
+      "title": "Hello world 2",
+      "keywords": [],
       "imageUrl": "https://picsum.photos/500",
       "content": "Lorem ipsum dolor sit amet",
-      "createdAt": "null",
+      "createdAt": 1635962189124,
       "author": "User1"
     },
     {
@@ -17,20 +14,9 @@
       "author": "User2",
       "imageUrl": "https://picsum.photos/500",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, maxime.",
-      "keywords": [
-        "Lorem",
-        "amet"
-      ],
-      "id": 23423465
-    },
-    {
-      "title": "Mem",
-      "author": "User3",
-      "imageUrl": "",
-      "createdAt": 1635852915243,
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, aperiam.",
       "keywords": [],
-      "id": 23423466
+      "id": 23423465,
+      "createdAt": 1635954003186
     },
     {
       "title": "thoughtsUP",

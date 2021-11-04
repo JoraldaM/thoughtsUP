@@ -1,4 +1,10 @@
- 
+import { PostItemComponent } from "./components/post-item.js";
+import {
+  appendComponent,
+  setEmptyElement,
+  setInnerHtml,
+} from "../helpers/core.js";
+import { PostItemListComponent } from "./components/post-item-list.js";
 const container = document.getElementById('post-container');
 const searchBar = document.getElementById('searchBar');
 let keyData=[];
@@ -14,7 +20,7 @@ searchBar.addEventListener('keyup', (e) => {
           character.title.toLowerCase().includes(searchString) 
        );  
     });
-    displayCharacters(filteredCharacters);
+    setInnerHtml(container,PostItemListComponent(filteredCharacters));
 
    
 });
@@ -28,24 +34,24 @@ const loadCharacters = async () => {
    }
 };
 
-const displayCharacters = (characters) => {
-   const htmlString = characters
-       .map((post) => {
-           return `
-           <div id="${post.id}">
-           <li class="post">
-             <h2>${post.title}</h2>
-             <img src="${post.imageUrl}" Alt="Posts image">
-             <p>${post.content}</p>
-             <h4>Author: ${post.author}</h4>
-             <button data-id="${post.id}" id="edit-${post.id}" data-action="edit">Edit</button>
-             <button data-id="${post.id}" id="delete-${post.id}" data-action="delete">Delete</button>
-             </li>
-             </div>`
-             ;
-       })
-       .join('');
-   container.innerHTML = htmlString;
-};
+// const displayCharacters = (characters) => {
+//    const htmlString = characters
+//        .map((post) => {
+//            return `
+//            <div id="${post.id}">
+//            <li class="post">
+//              <h2>${post.title}</h2>
+//              <img src="${post.imageUrl}" Alt="Posts image">
+//              <p>${post.content}</p>
+//              <h4>Author: ${post.author}</h4>
+//              <button data-id="${post.id}" id="edit-${post.id}" data-action="edit">Edit</button>
+//              <button data-id="${post.id}" id="delete-${post.id}" data-action="delete">Delete</button>
+//              </li>
+//              </div>`
+//              ;
+//        })
+//        .join('');
+//    container.innerHTML = htmlString;
+// };
 
 loadCharacters();

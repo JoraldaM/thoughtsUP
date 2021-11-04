@@ -1,5 +1,3 @@
-
-
 const postsURL = `http://localhost:3000/posts`;
 
 const errorsURL = `http://localhost:3000/errors?status=422`;
@@ -10,7 +8,9 @@ const imageError = document.querySelector('#errImage');
 const dataError = document.querySelector('#errData'); 
 
 
-let allPosts = []
+let allPosts = [];
+
+let errorButtonClicked = false;
 
 fetch(`${postsURL}`)
  .then( response => response.json() )
@@ -19,13 +19,12 @@ fetch(`${postsURL}`)
   
  }))
  postForm.addEventListener('submit', (e) => {
- if(validateErrorsBtn.clicked == true){
+ 
   e.preventDefault();
-  window.history.back();
-  //  return 
- }
- else {
 
+  if(errorButtonClicked) {
+    return;
+  }
 
  const titleInput = document.querySelector('#title').value
  const desInput = document.querySelector('#content').value
@@ -52,9 +51,8 @@ fetch(`${postsURL}`)
  }).then( response => response.json()) 
  postForm.reset();
 
-}
+
  
-//  postForm.reset();
 });
 
 
@@ -66,6 +64,7 @@ validateErrorsBtn.addEventListener('click', (e) => {
   fetch(`${errorsURL}`)
   .then( response => response.json() )
   .then( errors => {
+    errorButtonClicked = true;
     titleError.innerHTML=errors[0].fields.title
     imageError.innerHTML=errors[0].fields.imageUrl
     dataError.innerHTML=errors[0].message
