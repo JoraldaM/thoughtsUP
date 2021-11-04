@@ -75,6 +75,7 @@ button {
     border-radius: 19px;
     font-family: sans-serif;
     margin-right: 3px;
+    cursor: pointer;
 }
 #addFields, #rmvField{
   width:30px;
@@ -92,10 +93,15 @@ button {
     background: #807182;
     border: 1px solid transparent;
     color: #fff;
-    /* margin-left: 100px; */
 }
 #create:hover {
     background: #171a2b;
+}
+#errorBtn{
+    background: #A9A9A9;
+}
+#errorBtn:hover {
+    background: white;
 }
 
 #rmvField:hover{

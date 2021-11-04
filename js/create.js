@@ -5,7 +5,6 @@ const postForm = document.querySelector('#form');
 const validateErrorsBtn = document.querySelector('#errorBtn');
 const titleError = document.querySelector('#errTitle'); 
 const imageError = document.querySelector('#errImage'); 
-const dataError = document.querySelector('#errData'); 
 
 
 let allPosts = [];
@@ -67,6 +66,5 @@ validateErrorsBtn.addEventListener('click', (e) => {
     errorButtonClicked = true;
     titleError.innerHTML=errors[0].fields.title
     imageError.innerHTML=errors[0].fields.imageUrl
-    dataError.innerHTML=errors[0].message
   })
 })

@@ -24,7 +24,7 @@ body {
   font-size: 20px;
   margin-right: 8px;
 }
-
+/* FOOTER */
 .footer {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   background-size: cover;
@@ -204,7 +204,7 @@ body {
   margin-bottom: 100px;
 }
 
-/* Section */
+/* Section About */
 h2 {
   text-align: center;
 }
@@ -259,14 +259,6 @@ h2 {
   height: 157.5px;
   width: 45%;
   background-color: #d8aa96;
-  -webkit-clip-path: polygon(
-    50% 0%,
-    100% 25%,
-    100% 75%,
-    50% 100%,
-    0% 75%,
-    0% 25%
-  );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
@@ -281,6 +273,7 @@ h2 {
 .click {
   font-size: 30px;
   color: #d8aa96;
+  text-decoration: none;
 }
 
 .click:hover {
@@ -349,14 +342,7 @@ h2 {
   top: 0;
   left: 50%;
   transform: translate(-50%);
-  -webkit-clip-path: polygon(
-    50% 0%,
-    100% 25%,
-    100% 75%,
-    50% 100%,
-    0% 75%,
-    0% 25%
-  );
+
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   background-color: #d8aa96;
 }
@@ -393,13 +379,10 @@ h2 {
 .hvr-bounce-to-right {
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
-  -webkit-transition-property: color;
   transition-property: color;
-  -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
 
@@ -412,15 +395,10 @@ h2 {
   right: 0;
   bottom: 0;
   background: #16d7cd;
-  -webkit-transform: scaleX(0);
   transform: scaleX(0);
-  -webkit-transform-origin: 0 50%;
   transform-origin: 0 50%;
-  -webkit-transition-property: transform;
   transition-property: transform;
-  -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
-  -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 
@@ -433,8 +411,6 @@ h2 {
 .hvr-bounce-to-right:hover:before,
 .hvr-bounce-to-right:focus:before,
 .hvr-bounce-to-right:active:before {
-  -webkit-transform: scaleX(1);
   transform: scaleX(1);
-  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }

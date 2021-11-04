@@ -14,7 +14,6 @@ $(document).ready(function(){
     $(container).on('click', '#rmvField', function(e){
         e.preventDefault();
         $(this).parent('div').remove(); 
-        x--; 
     });
 });
 

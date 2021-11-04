@@ -5,6 +5,10 @@ import {
   setInnerHtml,
   appendComponent
 } from "../helpers/core.js";
+// import {
+//   prevPage,
+//   nextPage
+// } from "../helpers/previewNext.js";
 import { EditPostFormComponent } from "./components/edit-post-form.js";
 import { PostItemListComponent } from "./components/post-item-list.js";
 import { PostItemComponent } from "./components/post-item.js";
@@ -12,17 +16,17 @@ import { PostItemComponent } from "./components/post-item.js";
 
 const postsURL = `http://localhost:3000/posts`;
 const postContainer = document.querySelector("#post-container");
+
 // const formContainer = document.querySelector("#edit-post");
 const searchBar = document.getElementById("searchBar");
 
 function initializeUpdateDelete() {
   document.addEventListener("DOMContentLoaded", function () {
-    // const postsURL = `http://localhost:3000/posts`;
-    const formContainer = document.querySelector("#edit-post");
-
+    // const formContainer = document.querySelector("#edit-post");
     fetch(`${postsURL}`)
       .then((response) => response.json())
       .then((allPosts) => {
+       
         // setInnerHtml appends all the components all at once and the for loop appends them one by one.
         // both can be used, but we need to do some benchmarks to know which one is faster.
         // ex. a big list of components when being appended will make the browser throttle because it will
@@ -33,16 +37,18 @@ function initializeUpdateDelete() {
         //   appendComponent(postContainer, PostItemComponent(post));
         // }
 
-        setInnerHtml(postContainer, PostItemListComponent(allPosts)); // display posts
+
+
+        setInnerHtml(postContainer, PostItemListComponent(allPosts));
 
         initSearchBarEventListener(allPosts);
         initEditPostClickListener(postContainer, allPosts);
       });
-    // setInnerHtml(postContainer, PostItemListComponent(allPosts));
   });
 
-  // });
 }
+
+
 
 function initEditPostClickListener(postContainer, allPosts) {
   postContainer.addEventListener("click", (e) => {

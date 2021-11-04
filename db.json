@@ -35,10 +35,32 @@
       "title": "Title",
       "author": "User",
       "imageUrl": "https://picsum.photos/500",
-      "createdAt": 1635926067168,
+      "createdAt": 1636021296510,
       "content": "Content of post",
       "keywords": [],
       "id": 23423468
+    },
+    {
+      "title": "Post",
+      "author": "User",
+      "imageUrl": "https://picsum.photos/500",
+      "createdAt": 1636032603722,
+      "content": "Post",
+      "keywords": [
+        "post"
+      ],
+      "id": 23423469
+    },
+    {
+      "title": "AnotherPost",
+      "author": "AnotherAuth",
+      "imageUrl": "https://picsum.photos/500",
+      "createdAt": 1636032651921,
+      "content": "AnotherDesc",
+      "keywords": [
+        "Key"
+      ],
+      "id": 23423470
     }
   ],
   "errors": [
