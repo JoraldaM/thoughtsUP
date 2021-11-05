@@ -39,8 +39,6 @@ function initializeUpdateDelete() {
 
 
 
-        setInnerHtml(postContainer, PostItemListComponent(allPosts));
-
         initSearchBarEventListener(allPosts);
         initEditPostClickListener(postContainer, allPosts);
       });
@@ -67,7 +65,7 @@ function initEditPostClickListener(postContainer, allPosts) {
       appendComponent(editPostFormContainer, EditPostFormComponent(postData))
 
       const editForm = document.querySelector(`#post-form-${postData.id}`);
-
+   //gets the values from the edited form inputs and updates the post data
       editForm.addEventListener("submit", (e) => {
         e.preventDefault();
 

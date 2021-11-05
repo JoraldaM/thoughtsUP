@@ -7,16 +7,8 @@ const titleError = document.querySelector('#errTitle');
 const imageError = document.querySelector('#errImage'); 
 
 
-let allPosts = [];
-
 let errorButtonClicked = false;
 
-fetch(`${postsURL}`)
- .then( response => response.json() )
- .then( postData => postData.forEach(function(post) {
-   allPosts = postData
-  
- }))
  postForm.addEventListener('submit', (e) => {
  
   e.preventDefault();
