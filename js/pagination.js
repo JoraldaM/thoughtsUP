@@ -6,7 +6,6 @@ const btnPrev = document.getElementById("btn_prev");
 const container = document.getElementById("post-container");
 let currentPage = 1;
 
-//Add to container posts per page and set buttons to hidden or visible
 
 //Listener for calling next and prev functions by clicking next and prev buttons
 function initPaginationButtonClickListeners() {
